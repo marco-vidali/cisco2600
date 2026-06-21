@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "04b03";
+	src: url("fonts/04b03.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--background-color: #344b66;
+	--foreground-color: #f1f1e6;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+
+	font-family: "04b03";
+	color: var(--foreground-color);
+}
+
+body {
+	background-color: var(--background-color);
+
+	display: flex;
+	justify-content: center;
+}
+
+#container {
+	margin-top: 5rem;
+
+	width: 60rem;
+	height: 40rem;
+
+	border-style: solid;
+	border-width: 0.1rem;
+	border-color: var(--foreground-color);
+}
+
+#top-bar {
+	padding: 0.5rem;
+
+	border-style: solid;
+	border-width: 0;
+	border-bottom-width: 0.1rem;
+	border-color: var(--foreground-color);
+}
+
+#title {
+	font-size: 1rem;
+}
