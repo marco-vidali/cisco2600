@@ -67,6 +67,11 @@ body {
 	background-color: var(--secondary-color);
 }
 
+#disclamer > img {
+	align-self: center;
+	padding-right: 0.2rem;
+}
+
 #writings {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
