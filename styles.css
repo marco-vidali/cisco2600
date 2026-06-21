@@ -8,6 +8,7 @@
 :root {
 	--background-color: #344b66;
 	--foreground-color: #f1f1e6;
+	--secondary-color: #657c99;
 }
 
 * {
@@ -50,4 +51,14 @@ body {
 
 #title {
 	font-size: 1rem;
+}
+
+#content {
+	padding: 0.5rem;
+}
+
+#disclamer {
+	display: flex;
+	padding: 0.5rem;
+	background-color: var(--secondary-color);
 }
