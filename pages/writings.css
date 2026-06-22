@@ -17,16 +17,6 @@
 	padding-right: 0.3rem;
 }
 
-#book-cursor {
-	display: none;
-
-	position: fixed;
-
-	pointer-events: none;
-
-	z-index: 9999;
-}
-
 #writings {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
