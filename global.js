@@ -3,12 +3,14 @@ const pencilCursor = document.getElementById("pencil-cursor");
 const ctx = paper.getContext("2d");
 
 let isMouseDown = false;
+let hasMoved = false;
 let lastX = 0;
 let lastY = 0;
 
 ctx.canvas.width = window.innerWidth;
 ctx.canvas.height = window.innerHeight;
 
+ctx.fillStyle = "#f1f1e6";
 ctx.strokeStyle = "#f1f1e6";
 
 ctx.lineWidth = 2;
@@ -16,6 +18,7 @@ ctx.lineCap = "round";
 
 paper.addEventListener("mousedown", (e) => {
 	isMouseDown = true;
+	hasMoved = false;
 
 	lastX = e.clientX;
 	lastY = e.clientY;
@@ -33,7 +36,17 @@ paper.addEventListener("mouseleave", (e) => {
 	pencilCursor.style.display = "none";
 });
 
+paper.addEventListener("click", (e) => {
+	if (hasMoved) return;
+
+	ctx.beginPath();
+	ctx.arc(e.clientX, e.clientY, 2, 0, 2 * Math.PI);
+	ctx.fill();
+});
+
 paper.addEventListener("mousemove", (e) => {
+	hasMoved = true;
+
 	pencilCursor.style.left = e.clientX - 4 + "px";
 	pencilCursor.style.top = e.clientY - 31 + "px";
 
